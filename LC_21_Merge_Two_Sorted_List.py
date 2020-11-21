@@ -6,7 +6,7 @@
 class Solution:
     def mergeTwoLists_iterative(self, l1: ListNode, l2: ListNode) -> ListNode:
         # iterative 
-        # TC: O(m+n) SC: O(m+n)
+        # TC: O(m+n) SC: O(1)
         dummy = ListNode(None)
         head = dummy 
         while l1 and l2:
@@ -22,6 +22,7 @@ class Solution:
         return head.next 
 
     def mergeTwoLists_recursive(self, l1: ListNode, l2: ListNode) -> ListNode:
+        # TC: O(m+n) SC: O(m+n)
         # base case 
         if not l1: return l2 
         if not l2: return l1 
